@@ -36,7 +36,6 @@ pipeline {
                       which pip
                       which python
                       python3 gbpReport.py
-                      python3 graphGBP.py
                     '''
             }
         }
