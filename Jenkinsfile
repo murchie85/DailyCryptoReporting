@@ -35,6 +35,7 @@ pipeline {
                       pip list
                       which pip
                       which python
+                      python3 gbpReport.py
                     '''
             }
         }
