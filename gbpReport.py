@@ -65,7 +65,7 @@ for coin in coins:
         print(coin.printGBP())
 
 
-        filename = "../coinmarketprivate/reports/" + str(coin.Symbol) +"-gbpReport.txt"
+        filename = "/Users/adammcmurchie/projects/Jenkins-Stuff/coinmarketprivate/reports" + str(coin.Symbol) +"-gbpReport.txt"
 
         if os.path.exists(filename):
             f = open(filename,'a') # append 
