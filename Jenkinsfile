@@ -30,7 +30,7 @@ pipeline {
                     '''
             }
         }
-        stage('Test environment') {
+        stage('Test environment & pull metrics') {
             steps {
                 sh '''source activate ${BUILD_TAG} 
                       pip list
@@ -38,6 +38,11 @@ pipeline {
                       which python
                       python3 gbpReport.py
                     '''
+            }
+        }
+        stage('Generate Reports') {
+            steps {
+                build 'BASEGBP-REPORT'
             }
         }
         stage('Static code metrics') {
