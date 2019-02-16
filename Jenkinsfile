@@ -49,9 +49,9 @@ pipeline {
             steps {
                 echo "Raw metrics"
                 sh  ''' source activate ${BUILD_TAG}
-                        radon raw --json testTargets/ > raw_report.json
-                        radon cc --json testTargets/ > cc_report.json
-                        radon mi --json testTargets/ > mi_report.json
+                        radon raw --json testTargets/ > /Users/adammcmurchie/projects/Jenkins-Stuff/coinmarketcap/raw_report.json
+                        radon cc --json testTargets/ > /Users/adammcmurchie/projects/Jenkins-Stuff/coinmarketcap/cc_report.json
+                        radon mi --json testTargets/ > /Users/adammcmurchie/projects/Jenkins-Stuff/coinmarketcap/mi_report.json
                     '''
             }
         }
